@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    for (var i = 0; i < 10; i++) 
+    {
+  console.log(i);
+       }
+       let add=function sum()
+       {
+        return 1000;
+       }
+      
+       console.log(add());
+      // let a=0;
+       
+ function sum(a,d)
+ {
+    return a+d;
+ }
+ var c=sum(200,300);
+ console.log(c);
+let sum1=(x,y)=>
+{
+    return x*y;
+}
+console.log(sum1(6,11));
+let square=(a)=>
+{
+    return a*a;
+}
+console.log("area=",square(5));
+let square1=(a)=>
+    {
+    return a*a;
+    }
+    console.log("area1=",square(7));
+
+    square1=a=>
+    {
+    return a*a;
+    }
+    console.log("without () for parameters,area1 =",square1(8));
+    let e=11;
+   let square2=e=>  e*e;
+   console.log(square2(11));
+   function sub(name,...rest)
+   {
+    console.log(rest);
+    console.log(arguments);}
+   console.log(sub("cvr",10,20));
+   let arr1=[10,20,30];
+   let arr2=[...arr1];
+   arr1.push(50);
+   console.log(arr2);
+   let obj={
+    address:"hyd",
+    name:"xyz"}
+   console.log(obj);
+   let newobj={
+    ...obj,
+    rollno:5,
+    display(){return this;}
+   }
+   let obj2=
+   {
+    display(){
+        let that=this;
+        console.log("this=",this,"this.address=",obj.address);
+        setTimeout(function(){
+            console.log("inside setTimeout, this.address=",obj.address);
+        }.bind(that),500);
+    }
+   }
+   console.log("newobj="+newobj);
+   console.log("obj2="+obj2);
+   console.log("obj2.display()="+obj2.display());
+  </script> 
+</body>
+</html>
